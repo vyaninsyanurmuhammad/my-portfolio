@@ -35,7 +35,7 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-3">
                   <h1 className="text-slate-100 text-5xl font-bold">
-                    Hello, I'm Vyan Insya Nur Muhammad;
+                    Hello, I&apos;m Vyan Insya Nur Muhammad;
                   </h1>
                   <span className="text-xl font-medium text-slate-100">
                     A Software Engineer from Pati, Indonesia.

@@ -23,7 +23,7 @@ const useFollowPointerHook = (ref: RefObject<HTMLElement>) => {
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => window.removeEventListener("pointermove", handlePointerMove);
-  }, []);
+  }, [ref]);
 
   return point;
 };
