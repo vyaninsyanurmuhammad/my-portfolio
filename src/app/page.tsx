@@ -1,8 +1,18 @@
 "use client";
 
+import CardProjectArchive from "@/components/card-project-archive";
+import LinkText from "@/components/link-text";
 import useFollowPointerHook from "@/hooks/use-follow-pointer-hook";
-import { motion } from "framer-motion";
-import { Discord, Github, Instagram, Linkedin, X } from "iconoir-react";
+import { LayoutGroup, motion } from "framer-motion";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Discord,
+  Github,
+  Instagram,
+  Linkedin,
+  X,
+} from "iconoir-react";
 import { useRef } from "react";
 
 export default function Home() {
@@ -12,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-screen h-screen overflow-hidden bg-[#0E1200] flex relative">
+      <div className="w-screen h-screen overflow-hidden bg-[#0E1200] flex relative scroll-smooth">
         <div
           ref={ref}
           className="pointer-events-none fixed inset-0 -z-0 text-white lg:absolute"
@@ -20,25 +30,17 @@ export default function Home() {
             backgroundImage: `radial-gradient(600px at ${x}px ${y}px, rgba(192, 255, 0, 0.15), transparent 80%)`,
           }}
         ></div>
-        <motion.div
-          className="fixed w-5 h-5 bg-lime-400"
-          ref={ref}
-          animate={{ x, y }}
-          transition={{
-            type: "spring",
-            bounce: 0,
-          }}
-        ></motion.div>
+
         <div className="w-full h-full overflow-hidden">
-          <div className="max-w-full max-h-screen flex flex-row overflow-auto gap-24">
-            <div className="sticky top-0 w-full max-h-screen flex flex-col justify-between py-24 lg:ml-28 2xl:ml-80">
+          <div className="max-w-full max-h-screen flex flex-col px-12 lg:flex-row overflow-auto gap-24">
+            <div className="lg:sticky top-0 w-full max-h-screen flex flex-col justify-between py-24 lg:ml-28 2xl:ml-80">
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-3">
                   <h1 className="text-slate-100 text-5xl font-bold">
-                    Hello, I&apos;m Vyan Insya Nur Muhammad;
+                    Hello, I&apos;m Vyan Insya Nur Muhammad
                   </h1>
                   <span className="text-xl font-medium text-slate-100">
-                    A Software Engineer from Pati, Indonesia.
+                    A Software Developer from Pati, Indonesia.
                   </span>
                 </div>
                 <p className="text-slate-400">
@@ -47,11 +49,21 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4 text-slate-100">
-                <Github className="h-8 w-8" />
-                <Linkedin className="h-8 w-8" />
-                <Instagram className="h-8 w-8" />
-                <X className="h-8 w-8" />
-                <Discord className="h-8 w-8" />
+                <LinkText>
+                  <Github className="h-8 w-8" />
+                </LinkText>
+                <LinkText>
+                  <Linkedin className="h-8 w-8" />
+                </LinkText>
+                <LinkText>
+                  <Instagram className="h-8 w-8" />
+                </LinkText>
+                <LinkText>
+                  <X className="h-8 w-8" />
+                </LinkText>
+                <LinkText>
+                  <Discord className="h-8 w-8" />
+                </LinkText>
               </div>
             </div>
             <div className="w-full h-full lg:mr-28 2xl:mr-80">
@@ -61,12 +73,8 @@ export default function Home() {
                     My journey into the world of coding commenced in 2018 within
                     the hallowed halls of the Information Technology program
                     at&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">
-                        Muhammadiyah University of Yogyakarta
-                      </span>
-                    </a>
-                    . Enrolled with an insatiable curiosity and a hunger for
+                    <LinkText>Muhammadiyah University of Yogyakarta</LinkText>.
+                    Enrolled with an insatiable curiosity and a hunger for
                     knowledge, I immersed myself in the fundamentals of
                     programming languages, algorithms, and software development
                     methodologies. Throughout my academic tenure, I not only
@@ -78,50 +86,33 @@ export default function Home() {
                   <p className="text-slate-400">
                     Within the confines of my university education and course
                     from&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Purwadhika School</span>
-                    </a>
-                    , I discovered a passion for solving complex problems and
-                    transforming abstract ideas into tangible, functional
-                    solutions. As I navigated through the intricacies of coding
-                    challenges and collaborative projects, I unearthed a knack
-                    for crafting elegant and efficient code that resonated with
-                    both form and functionality. These formative experiences not
-                    only solidified my technical prowess but also ignited a
-                    fervent desire to contribute meaningfully to the
-                    ever-evolving landscape of software development.
+                    <LinkText>Purwadhika School</LinkText>, I discovered a
+                    passion for solving complex problems and transforming
+                    abstract ideas into tangible, functional solutions. As I
+                    navigated through the intricacies of coding challenges and
+                    collaborative projects, I unearthed a knack for crafting
+                    elegant and efficient code that resonated with both form and
+                    functionality. These formative experiences not only
+                    solidified my technical prowess but also ignited a fervent
+                    desire to contribute meaningfully to the ever-evolving
+                    landscape of software development.
                   </p>
                   <p className="text-slate-400">
                     Now, armed with a robust foundation from my academic
                     endeavors, I stand at the threshold of professional
                     exploration, eager to apply my skills in&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">React.js</span>
-                    </a>
+                    <LinkText>React.js</LinkText>
                     ,&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Next.js</span>
-                    </a>
+                    <LinkText>Next.js</LinkText>
                     ,&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Express.js</span>
-                    </a>
+                    <LinkText>Express.js</LinkText>
                     ,&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Laravel</span>
-                    </a>
+                    <LinkText>Laravel</LinkText>
                     ,&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Flutter</span>
-                    </a>
+                    <LinkText>Flutter</LinkText>
                     ,&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">Firebase</span>
-                    </a>
-                    , and&nbsp;
-                    <a href="">
-                      <span className="text-slate-100">SQL</span>
-                    </a>
+                    <LinkText>Firebase</LinkText>, and&nbsp;
+                    <LinkText>SQL</LinkText>
                     ,&nbsp; and passion in real-world contexts. With each line
                     of code and every project undertaken, I am committed to
                     continuous learning and growth, driven by the conviction
@@ -129,17 +120,26 @@ export default function Home() {
                     success in the dynamic realm of technology.
                   </p>
                 </div>
-                <div className="flex flex-row">
-                  <div className="bg-lime-400 h-28 w-28 shrink-0 rounded-lg"></div>
-                  <div>
-                    <h4 className="text-white font-medium">Build a Spotify Connected App</h4>
-                    <p className="text-slate-400">
-                      Video course that teaches how to build a web app with the
-                      Spotify Web API. Topics covered include the principles of
-                      REST APIs, user auth flows, Node, Express, React, Styled
-                      Components, and more.
-                    </p>
+                <div className="flex flex-col gap-6 group/list">
+                  <div className="flex flex-col gap-8 group/list">
+                    <CardProjectArchive
+                      title="Build a Kesrepro App"
+                      description={
+                        '"Kesrepro App" is an educational game about reproductive health for early teenagers (aged 10-15). Built using Flutter, Redux, and Firebase, this app offers engaging quizzes to enhance their understanding of this topic.'
+                      }
+                    />
+                    <CardProjectArchive
+                      title="Cassavain"
+                      description={`"Cassavain" is a Laravel and MySQL project owned by PT. Blantika Alam Perkasa. It's a trading company collaborating with suppliers and manufacturers of cassava derivative products in Central Java.`}
+                    />
                   </div>
+                  <a
+                    href=""
+                    className="text-slate-100 hover:text-lime-400 flex flex-row gap-2 group justify-start items-center"
+                  >
+                    <span>See My Resume</span>
+                    <ArrowRight className="w-4 h-4 text-slate-100 group-hover:text-lime-400 group-hover:scale-125 group-hover:stroke-2 transition-all ease-in-out" />
+                  </a>
                 </div>
               </div>
             </div>
