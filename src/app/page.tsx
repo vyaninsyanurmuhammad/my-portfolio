@@ -97,7 +97,7 @@ export default function Home() {
                     desire to contribute meaningfully to the ever-evolving
                     landscape of software development.
                   </p>
-                  <p className="text-slate-400">
+                  <p className="text-slate-400 break-words">
                     Now, armed with a robust foundation from my academic
                     endeavors, I stand at the threshold of professional
                     exploration, eager to apply my skills in&nbsp;
