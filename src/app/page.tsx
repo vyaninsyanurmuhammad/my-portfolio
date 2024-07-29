@@ -26,9 +26,23 @@ export default function Home() {
     {
       title: "Build a Kesrepro App",
       description:
-        '"Kesrepro App" is an educational game about reproductive health for early teenagers (aged 10-15). Built using Flutter, Redux, and Firebase, this app offers engaging quizzes to enhance their understanding of this topic.',
+        '"Kesrepro App" is an educational game about reproductive health for early teenagers (aged 10-15). Built by using Flutter, Redux, and Firebase, this app offers engaging quizzes to enhance their understanding of this topic.',
       href: "https://drive.google.com/file/d/1ZXzjolTaB_ovo5m_vqVk_MnbN0Rl4m9Z/view?usp=sharing",
       image: "/images/kesrep.png",
+    },
+    {
+      title: "Build a StayCation Web",
+      description:
+        'StayCation Web App is an e-commerce application which is a web-based application used to help its users compare accommodation prices based on date. Built by using NextJs, Redux, Auth.Js, Shadcn/UI, ExpressJs, Nodemailer, Node-corn, Prisma and MySQL.',
+      href: "https://jcwdol130204.purwadhikabootcamp.com/",
+      image: "/images/staycation.png",
+    },
+    {
+      title: "Build a LiveBold Web",
+      description:
+        '"LA - Live bold" is a gamification website for personality tests. Built by using NextJs, this application offers engaging quizzes to increase sales of LA Bold brand products',
+      href: "https://www.livebold.id/",
+      image: "/images/livebold.png",
     },
   ];
 
@@ -178,7 +192,7 @@ export default function Home() {
                     )}
                   </div>
                   <Link
-                    href="https://drive.google.com/file/d/12jb_30y4IejpSWd6LJhbqTtpODqbmaYd/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1NOJuOIT1GKf-6KpeL0UhIUcPA_qgaODt/view?usp=sharing"
                     className="text-slate-100 hover:text-lime-400 flex flex-row gap-2 group justify-start items-center"
                   >
                     <span>See My Resume</span>
