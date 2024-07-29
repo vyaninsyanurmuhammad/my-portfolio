@@ -2,6 +2,7 @@
 
 import CardProjectArchive from "@/components/card-project-archive";
 import LinkText from "@/components/link-text";
+import { LinkPreview } from "@/components/ui/link-preview";
 import useFollowPointerHook from "@/hooks/use-follow-pointer-hook";
 import { LayoutGroup, motion } from "framer-motion";
 import {
@@ -13,12 +14,23 @@ import {
   Linkedin,
   X,
 } from "iconoir-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Home() {
   const ref = useRef(null);
 
   const { x, y } = useFollowPointerHook(ref);
+
+  const projects = [
+    {
+      title: "Build a Kesrepro App",
+      description:
+        '"Kesrepro App" is an educational game about reproductive health for early teenagers (aged 10-15). Built using Flutter, Redux, and Firebase, this app offers engaging quizzes to enhance their understanding of this topic.',
+      href: "https://drive.google.com/file/d/1ZXzjolTaB_ovo5m_vqVk_MnbN0Rl4m9Z/view?usp=sharing",
+      image: "/images/kesrep.png",
+    },
+  ];
 
   return (
     <>
@@ -49,21 +61,32 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4 text-slate-100">
-                <LinkText>
-                  <Github className="h-8 w-8" />
-                </LinkText>
-                <LinkText>
-                  <Linkedin className="h-8 w-8" />
-                </LinkText>
-                <LinkText>
-                  <Instagram className="h-8 w-8" />
-                </LinkText>
-                <LinkText>
-                  <X className="h-8 w-8" />
-                </LinkText>
-                <LinkText>
-                  <Discord className="h-8 w-8" />
-                </LinkText>
+                <Link href="https://github.com/vyaninsyanurmuhammad">
+                  <LinkText>
+                    <Github className="h-8 w-8" />
+                  </LinkText>
+                </Link>
+
+                <Link href="https://www.linkedin.com/in/vyaninsyanurmuhammad/">
+                  <LinkText>
+                    <Linkedin className="h-8 w-8" />
+                  </LinkText>
+                </Link>
+                <Link href="https://www.instagram.com/vyaninsyanurmuhammad/">
+                  <LinkText>
+                    <Instagram className="h-8 w-8" />
+                  </LinkText>
+                </Link>
+                <Link href="https://x.com/NurVyan">
+                  <LinkText>
+                    <X className="h-8 w-8" />
+                  </LinkText>
+                </Link>
+                <Link href="https://discordapp.com/users/pororo8058">
+                  <LinkText>
+                    <Discord className="h-8 w-8" />
+                  </LinkText>
+                </Link>
               </div>
             </div>
             <div className="w-full h-full lg:mr-28 2xl:mr-80">
@@ -73,8 +96,10 @@ export default function Home() {
                     My journey into the world of coding commenced in 2018 within
                     the hallowed halls of the Information Technology program
                     at&nbsp;
-                    <LinkText>Muhammadiyah University of Yogyakarta</LinkText>.
-                    Enrolled with an insatiable curiosity and a hunger for
+                    <LinkPreview url="https://www.umy.ac.id/">
+                      <LinkText>Muhammadiyah University of Yogyakarta</LinkText>
+                    </LinkPreview>
+                    . Enrolled with an insatiable curiosity and a hunger for
                     knowledge, I immersed myself in the fundamentals of
                     programming languages, algorithms, and software development
                     methodologies. Throughout my academic tenure, I not only
@@ -86,60 +111,79 @@ export default function Home() {
                   <p className="text-slate-400">
                     Within the confines of my university education and course
                     from&nbsp;
-                    <LinkText>Purwadhika School</LinkText>, I discovered a
-                    passion for solving complex problems and transforming
-                    abstract ideas into tangible, functional solutions. As I
-                    navigated through the intricacies of coding challenges and
-                    collaborative projects, I unearthed a knack for crafting
-                    elegant and efficient code that resonated with both form and
-                    functionality. These formative experiences not only
-                    solidified my technical prowess but also ignited a fervent
-                    desire to contribute meaningfully to the ever-evolving
-                    landscape of software development.
+                    <LinkPreview url="https://purwadhika.com/">
+                      <LinkText>Purwadhika School</LinkText>
+                    </LinkPreview>
+                    , I discovered a passion for solving complex problems and
+                    transforming abstract ideas into tangible, functional
+                    solutions. As I navigated through the intricacies of coding
+                    challenges and collaborative projects, I unearthed a knack
+                    for crafting elegant and efficient code that resonated with
+                    both form and functionality. These formative experiences not
+                    only solidified my technical prowess but also ignited a
+                    fervent desire to contribute meaningfully to the
+                    ever-evolving landscape of software development.
                   </p>
                   <p className="text-slate-400 break-words">
                     Now, armed with a robust foundation from my academic
                     endeavors, I stand at the threshold of professional
                     exploration, eager to apply my skills in&nbsp;
-                    <LinkText>React.js</LinkText>
+                    <LinkPreview url="https://react.dev/">
+                      <LinkText>React.js</LinkText>
+                    </LinkPreview>
                     ,&nbsp;
-                    <LinkText>Next.js</LinkText>
+                    <LinkPreview url="https://nextjs.org/">
+                      <LinkText>Next.js</LinkText>
+                    </LinkPreview>
                     ,&nbsp;
-                    <LinkText>Express.js</LinkText>
+                    <LinkPreview url="https://expressjs.com/">
+                      <LinkText>Express.js</LinkText>
+                    </LinkPreview>
                     ,&nbsp;
-                    <LinkText>Laravel</LinkText>
+                    <LinkPreview url="https://laravel.com/">
+                      <LinkText>Laravel</LinkText>
+                    </LinkPreview>
                     ,&nbsp;
-                    <LinkText>Flutter</LinkText>
+                    <LinkPreview url="https://flutter.dev/">
+                      <LinkText>Flutter</LinkText>
+                    </LinkPreview>
                     ,&nbsp;
-                    <LinkText>Firebase</LinkText>, and&nbsp;
-                    <LinkText>SQL</LinkText>
-                    ,&nbsp; and passion in real-world contexts. With each line
-                    of code and every project undertaken, I am committed to
-                    continuous learning and growth, driven by the conviction
-                    that innovation and perseverance are the cornerstones of
-                    success in the dynamic realm of technology.
+                    <LinkPreview url="https://firebase.google.com/?hl=id">
+                      <LinkText>Firebase</LinkText>
+                    </LinkPreview>
+                    , and{" "}
+                    <LinkPreview url="https://www.mysql.com/">
+                      <LinkText>MySQL</LinkText>
+                    </LinkPreview>{" "}
+                    and passion in real-world contexts. With each line of code
+                    and every project undertaken, I am committed to continuous
+                    learning and growth, driven by the conviction that
+                    innovation and perseverance are the cornerstones of success
+                    in the dynamic realm of technology.
                   </p>
                 </div>
                 <div className="flex flex-col gap-6 group/list">
                   <div className="flex flex-col gap-8 group/list">
-                    <CardProjectArchive
-                      title="Build a Kesrepro App"
-                      description={
-                        '"Kesrepro App" is an educational game about reproductive health for early teenagers (aged 10-15). Built using Flutter, Redux, and Firebase, this app offers engaging quizzes to enhance their understanding of this topic.'
-                      }
-                    />
-                    <CardProjectArchive
-                      title="Cassavain"
-                      description={`"Cassavain" is a Laravel and MySQL project owned by PT. Blantika Alam Perkasa. It's a trading company collaborating with suppliers and manufacturers of cassava derivative products in Central Java.`}
-                    />
+                    {projects.map(
+                      ({ title, description, image, href }, index) => (
+                        <CardProjectArchive
+                          key={`${title}-${index}`}
+                          index={index}
+                          title={title}
+                          description={description}
+                          href={href}
+                          image={image}
+                        />
+                      )
+                    )}
                   </div>
-                  <a
-                    href=""
+                  <Link
+                    href="https://drive.google.com/file/d/12jb_30y4IejpSWd6LJhbqTtpODqbmaYd/view?usp=sharing"
                     className="text-slate-100 hover:text-lime-400 flex flex-row gap-2 group justify-start items-center"
                   >
                     <span>See My Resume</span>
                     <ArrowRight className="w-4 h-4 text-slate-100 group-hover:text-lime-400 group-hover:scale-125 group-hover:stroke-2 transition-all ease-in-out" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

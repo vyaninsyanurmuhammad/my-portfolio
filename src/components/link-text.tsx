@@ -1,17 +1,11 @@
 import React, { ReactNode } from "react";
 
-const LinkText = ({
-  href,
-  children,
-}: {
-  href?: string;
-  children: ReactNode;
-}) => {
+const LinkText = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <a className="cursor-pointer text-slate-100 hover:text-lime-400" href={href}>
-       {children}
-      </a>
+      <span className="cursor-pointer text-slate-100 hover:text-lime-400">
+        {children}
+      </span>
     </>
   );
 };
